@@ -1,4 +1,4 @@
 theme = "port-hugo-main"
-baseURL = "http://alessandroguidi.site"
+baseURL = "https://alessandroguidi.site"
 languageCode = "en-us"
 title = "Alessandro Guidi"
