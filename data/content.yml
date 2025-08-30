@@ -1,12 +1,13 @@
+
 ########################## hero area ##########################
 hero:
   title: "Hi, I'm Alessandro Guidi"
 
   # animated text loop (replace with your real focus areas)
- occupations:
-  - "B2B Product Manager"
-  - "Strategic Management Consultant"
-  - "Automation & Tech Practitioner"
+  occupations:
+    - "B2B Product Manager"
+    - "Strategic Management Consultant"
+    - "Automation & Tech Practitioner"
 
   # hero background image
   bg_image: 'images/back_1.jpg'
