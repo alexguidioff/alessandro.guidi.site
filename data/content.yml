@@ -90,7 +90,7 @@ funfacts:
 
     - name: 'DUCKS APPROVED THIS SITE'
       image: 'images/icons/duck.png'
-      count: '4'
+      count: '5'
 
 ############################# portfolio ################################
 portfolio:
