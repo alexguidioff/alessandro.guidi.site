@@ -54,11 +54,11 @@ weight = 3
 copyright = "Copyright Alessandro Guidi &copy;"
 # Meta data
 description = "Personal Portfolio"
-author = "Burton Guster"
+author = "Alessandro Guidi"
 favicon = "images/favicon.png"
 google_analytics = ""
-logo_light = "images/logo.png"
-logo_dark = "images/logo-dark.png"
+logo_light = "images/favicon.png"
+logo_dark = "images/favicon.png"
 
 # Preloader
 [params.preloader]
