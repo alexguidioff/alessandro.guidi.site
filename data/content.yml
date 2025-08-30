@@ -1,0 +1,103 @@
+########################## hero area ##########################
+hero:
+  title: "Hi, I'm Alessandro Guidi"
+
+  # animated text loop (replace with your real focus areas)
+  occupations:
+    - "Product Manager"
+    - "Tech & Data Enthusiast"
+    - "AI & Finance Explorer"
+
+  # hero background image
+  bg_image: 'images/back_1.jpg'
+  # optional mobile breakpoint background
+  # mobile_bg_image: 'images/gus_small.jpg'
+
+########################### About ##################################
+about:
+  enable: true
+  image: 'images/Ale.png'
+  title: 'About Me'
+  content: Hi! I'm Alessandro Guidi, a Product Manager passionate about technology, data, and innovation. 
+    <br>
+    I love designing efficient workflows, building scalable solutions, and exploring the intersection of tech and finance.  
+    <br>
+    If you want to collaborate or have any questions, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/alessandroguidi1/), [GitHub](https://github.com/alexguidioff), or by [email](mailto:alexguidioff@gmail.com).
+  button:
+    enable: true
+    label: 'DOWNLOAD MY RESUME'
+    link: 'CV/Alessandro_Guidi_Resume.pdf'
+    icon: 'fa-download'
+
+###########################3 Experience ##############################
+experience:
+  enable: true
+  title: 'EXPERIENCE'
+  experience_list:
+    - name: Product Manager
+      company: '[Amazon France](https://www.amazon.com/)'
+      duration: '2025-Current'
+      content: "Embarking on a new quest at Amazon, leveling up my skills in product management and B2B adventures, ready to tackle challenges, optimize workflows, and conquer new markets. The adventure has just begun, and every day is a boss fight waiting to be mastered!"
+
+    - name: Consultant
+      company: '[Capgemini Italy](https://www.capgemini.com/)'
+      duration: '2023-2025'
+      content: "Built strategic battle plans for financial fortresses, slashed €2M in operational costs like a pro-level raid, optimized risk models like leveling up skills, and guided clients through epic transformation quests to align with the high-score corporate strategy leaderboard."
+   
+    - name: Business Analyst
+      company: '[Facile.it](https://www.facile.it/)'
+      duration: '2023-23'
+      content: "Leveled up the mortgage division by 30%, unlocked workflow efficiency boosts, and completed the epic quest of optimizing pricing strategies. XP gained: customers acquired!"
+
+############################### Skill #################################
+skill:
+  enable: true
+  title: 'SOME SKILLS'
+  showpercent: false
+  skill_list:
+    - name: 'Data Analysis'
+      percentage: '85%'
+
+    - name: 'Project Management'
+      percentage: '93%'
+
+    - name: 'Communication'
+      percentage: '58%'
+
+    - name: 'Adaptability'
+      percentage: '100%'
+
+    - name: 'Problem Solving'
+      percentage: '92%'
+
+    - name: 'Reporting & Visualization'
+      percentage: '85%'
+
+funfacts:
+  enable: true
+  funfacts_list:
+    - name: 'PROJECTS MANAGED'
+      image: 'images/icons/projects.png'
+      count: '12'
+
+    - name: 'HOURS SPENT ON EXCEL'
+      image: 'images/icons/excel.png'
+      count: '400'
+
+    - name: 'EXPERIENCES ABROAD'
+      image: 'images/icons/abroad.png'
+      count: '3'
+
+    - name: 'DUCKS THAT APPROVED THIS SITE'
+      image: 'images/icons/duck.png'
+      count: '3'
+
+############################# portfolio ################################
+portfolio:
+  enable: true
+  title: 'MY WORK'
+  portfolio_list:
+    - name: Hugo
+      image: 'images/portfolio/Github.jpg'
+      url: https://github.com/alexguidioff/Portfolio_DataScience
+      description: Welcome to my Data Science portfolio! This repository contains multiple projects developed during my studies and personal work. Each project is organized in its own folder, and each folder contains a README.md in Italian that describes the project in detail, including data analysis, preprocessing steps, and code explanations.
