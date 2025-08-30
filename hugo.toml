@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://alexguidioff.github.io/alessandro.guidi.site/"
+baseURL = "http://alessandroguidi.site"
 title = "Port Hugo"
 theme = "port-hugo-main"
 
