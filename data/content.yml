@@ -88,9 +88,9 @@ funfacts:
       image: 'images/icons/abroad.png'
       count: '3'
 
-    - name: 'DUCKS THAT APPROVED THIS SITE'
+    - name: 'DUCKS APPROVED THIS SITE'
       image: 'images/icons/duck.png'
-      count: '3'
+      count: '4'
 
 ############################# portfolio ################################
 portfolio:
