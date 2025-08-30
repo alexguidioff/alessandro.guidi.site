@@ -11,7 +11,7 @@ hero:
   # hero background image
   bg_image: 'images/back_1.jpg'
   # optional mobile breakpoint background
-  # mobile_bg_image: 'images/gus_small.jpg'
+  mobile_bg_image: 'images/back_1.jpg'
 
 ########################### About ##################################
 about:
