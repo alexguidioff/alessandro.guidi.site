@@ -51,12 +51,12 @@ weight = 3
 
 #################### default parameters ################################
 [params]
-copyright = "Copyright Burton Guster &copy;"
+copyright = "Copyright Alessandro Guidi &copy;"
 # Meta data
 description = "Personal Portfolio"
 author = "Burton Guster"
 favicon = "images/favicon.png"
-google_analytics = "G-ABCDEFG123"
+google_analytics = ""
 logo_light = "images/logo.png"
 logo_dark = "images/logo-dark.png"
 
@@ -69,19 +69,15 @@ preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
 
 [[params.social]]
 icon = "fab fa-github"
-link = "https://github.com/tylersayshi"
+link = "https://github.com/alexguidioff"
 
 [[params.social]]
 icon = "fab fa-linkedin"
-link = "https://www.linkedin.com/"
+link = "https://www.linkedin.com/in/alessandroguidi1/"
 
 [[params.social]]
 icon = "fas fa-envelope"
-link = "mailto:guster@burton.com"
-
-[[params.social]]
-icon = "fab fa-medium"
-link = "https://medium.com/@gusburton"
+link = "mailto:alexguidioff@gmail.com"
 
 contentDir = "content/english"
 weight = 1
