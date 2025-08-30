@@ -19,7 +19,7 @@ about:
   enable: true
   image: 'images/Ale.png'
   title: 'About Me'
-  content: 'Hi! I am Alessandro Guidi, a Product Manager passionate about technology, data, and innovation. <br> I love designing efficient workflows, building scalable solutions, and exploring the intersection of tech and finance. <br> If you want to collaborate or have any questions, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/alessandroguidi1/), [GitHub](https://github.com/alexguidioff), or by [email](mailto:alexguidioff@gmail.com).
+  content: Hi! I am Alessandro Guidi, a Product Manager passionate about technology, data, and innovation. <br> I love designing efficient workflows, building scalable solutions, and exploring the intersection of tech and finance. <br> If you want to collaborate or have any questions, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/alessandroguidi1/), [GitHub](https://github.com/alexguidioff), or by [email](mailto:alexguidioff@gmail.com).
   button:
     enable: true
     label: 'DOWNLOAD MY RESUME'
