@@ -1,4 +1,4 @@
-theme = "port-hugo"
+theme = "port-hugo-main"
 baseURL = "http://localhost:1313/"
 languageCode = "en-us"
 title = "Alessandro Guidi"
