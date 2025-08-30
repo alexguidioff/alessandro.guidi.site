@@ -97,6 +97,6 @@ portfolio:
   title: 'MY WORK'
   portfolio_list:
     - name: Hugo
-      image: 'images/portfolio/Github.jpg'
+      image: 'images/portfolio/Github.png'
       url: https://github.com/alexguidioff/Portfolio_DataScience
       description: Welcome to my Data Science portfolio! This repository contains multiple projects developed during my studies and personal work. Each project is organized in its own folder, and each folder contains a README.md in Italian that describes the project in detail, including data analysis, preprocessing steps, and code explanations.
