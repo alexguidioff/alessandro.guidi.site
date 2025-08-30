@@ -19,7 +19,7 @@ about:
   enable: true
   image: 'images/Ale.png'
   title: 'About Me'
-    content: Hi! I'm Alessandro Guidi, a Product Manager passionate about technology, data, and innovation. 
+  content: Hi! I'm Alessandro Guidi, a Product Manager passionate about technology, data, and innovation. 
     <br>
     I love designing efficient workflows, building scalable solutions, and exploring the intersection of tech and finance.  
     <br>
