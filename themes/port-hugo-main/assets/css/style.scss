@@ -905,16 +905,13 @@ ul.experience-chart {
 }
 .skillbar {
   position: relative;
-  display: flex;
+  display: block;
   margin-bottom: 40px;
-  align-items: center;
   width: 100%;
   background: #231f1e;
   border: 2px solid #c7c7c7;
   height: 18px;
   border-radius: 22px;
-  transition: 0.2s linear;
-  transition-property: width, background-color;
 }
 .skillbar-title {
   font-size: 16px;
@@ -933,8 +930,9 @@ ul.experience-chart {
 }
 .skillbar-bar {
   height: 10px;
-  margin: 0px 2px;
-  width: 0px;
+  margin: 2px;
+  width: 0;
+  max-width: calc(100% - 4px);
   background: #665f34;
   border-radius: 22px;
 }
@@ -950,6 +948,85 @@ ul.experience-chart {
     font-weight: 700;
     letter-spacing: 4px;
     position: relative;
+  }
+}
+/* ========= GitHub live repos ======= */
+.portfolio-subtitle {
+  color: #9a938d;
+  font-size: 15px;
+  margin-top: 14px;
+}
+.github-repos {
+  margin-top: 45px;
+  text-align: left;
+}
+.github-loading,
+.github-error {
+  color: #c7c7c7;
+  text-align: center;
+  font-size: 15px;
+}
+.github-error a {
+  color: #d9822b;
+}
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 22px;
+}
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  background: #2b2624;
+  border: 1px solid #3a332f;
+  border-radius: 12px;
+  padding: 20px 22px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.38);
+    border-color: #64582a;
+    text-decoration: none;
+  }
+}
+.repo-name {
+  color: #d9822b;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  word-break: break-word;
+}
+.repo-desc {
+  color: #c7c7c7;
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 0 0 16px;
+  flex: 1 1 auto;
+}
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  color: #9a938d;
+}
+.repo-lang {
+  color: #c7c7c7;
+  font-weight: 600;
+}
+.repo-stat i {
+  color: #64582a;
+  margin-right: 3px;
+}
+.repo-updated {
+  margin-left: auto;
+}
+.github-all {
+  margin-top: 38px;
+  i {
+    margin-left: 6px;
   }
 }
 .under-menu {
@@ -1398,3 +1475,175 @@ ul.experience-chart {
     }
   }
 }
+/*--------------------------------
+   Start Journey (parallel timeline)
+----------------------------------*/
+.journey-section {
+  margin-top: 50px;
+  h2 {
+    color: #c7c7c7;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+.journey-scroll {
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+.journey {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.journey-head {
+  display: flex;
+  margin-bottom: 14px;
+}
+.journey-axis-spacer {
+  flex: 0 0 48px;
+}
+.journey-lane-titles {
+  flex: 1;
+  display: flex;
+  gap: 14px;
+}
+.journey-lane-title {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.journey-body {
+  display: flex;
+  height: 560px;
+}
+.journey-axis {
+  flex: 0 0 48px;
+  position: relative;
+}
+.journey-year {
+  position: absolute;
+  right: 8px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: #8a8682;
+}
+.journey-lanes {
+  flex: 1;
+  display: flex;
+  gap: 14px;
+  position: relative;
+}
+.journey-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.journey-gridline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(199, 199, 199, 0.1);
+}
+.journey-lane {
+  flex: 1;
+  position: relative;
+  min-width: 80px;
+  background: rgba(255, 255, 255, 0.018);
+  border-radius: 10px;
+}
+.journey-bar {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  border-radius: 9px;
+  padding: 8px 9px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: #231f1e;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s, box-shadow 0.25s;
+  z-index: 1;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+  }
+  .journey-bar-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  .journey-bar-sub {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.8;
+    margin-top: 3px;
+  }
+}
+.journey-milestone {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed rgba(210, 162, 63, 0.55);
+  z-index: 3;
+  pointer-events: none;
+}
+.journey-milestone-label {
+  position: absolute;
+  left: 6px;
+  top: -10px;
+  background: #231f1e;
+  border: 1px solid #d2a23f;
+  color: #d2a23f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 2px 8px;
+  border-radius: 11px;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .journey {
+    min-width: 540px;
+  }
+  .journey-lane-title {
+    font-size: 11px;
+  }
+  .journey-bar .journey-bar-title {
+    font-size: 12px;
+  }
+}
+/*--------------------------------
+   End Journey (parallel timeline)
+----------------------------------*/
+/*--------------------------------
+   Start Skill categories
+----------------------------------*/
+.skill-category {
+  margin-bottom: 22px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.skill-category-title {
+  color: #D9822B;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+/*--------------------------------
+   End Skill categories
+----------------------------------*/

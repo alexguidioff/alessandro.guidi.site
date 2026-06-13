@@ -2,15 +2,6 @@
   <nav>
     <!-- desktop-menu -->
     <div class="menu-container">
-      <div class="desktop-menu-logo">
-        <a href="{{ .Site.BaseURL | relLangURL }}"
-          ><img
-            class="img-fluid"
-            src="{{ .Site.Params.logo_light | relURL }}"
-            alt="{{ .Site.Title }}"
-            id="desktop-logo"
-        /></a>
-      </div>
       <ul class="desktop-menu list-inline mb-0" id="desktop-menu">
         {{ range .Site.Menus.main }}
         <li class="menu-item hvr-underline-from-left {{ .Weight }}">
@@ -26,14 +17,6 @@
             <span></span>
             <span></span>
           </a>
-        </div>
-        <div class="mobile-menu-logo">
-          <a href="{{ .Site.BaseURL | relLangURL }}"
-            ><img
-              class="img-fluid"
-              src="{{ .Site.Params.logo_dark | relURL }}"
-              alt="{{ .Site.Title }}"
-          /></a>
         </div>
         <div class="menu-slider">
           <nav>

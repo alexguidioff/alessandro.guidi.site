@@ -39,6 +39,62 @@
     </div>
     {{ end }} {{ end }}
 
+    {{ if .Site.Data.content.journey.enable }} {{ with
+    .Site.Data.content.journey }}
+    {{ $rs := .range_start }} {{ $re := .range_end }} {{ $span := sub $re $rs }}
+    {{ $items := .items }}
+    <div class="row journey-section">
+      <div class="col-12">
+        <h2>{{ .title }}</h2>
+        <div class="journey-scroll">
+          <div class="journey">
+            <div class="journey-head">
+              <span class="journey-axis-spacer"></span>
+              <div class="journey-lane-titles">
+                {{ range .lanes }}
+                <span class="journey-lane-title" style="color:{{ .color }}">{{ .name }}</span>
+                {{ end }}
+              </div>
+            </div>
+            <div class="journey-body">
+              <div class="journey-axis">
+                {{ range .years }}
+                <span class="journey-year" style="top:{{ printf "%.2f" (mul (div (sub $re .) $span) 100) }}%">{{ . }}</span>
+                {{ end }}
+              </div>
+              <div class="journey-lanes">
+                <div class="journey-grid">
+                  {{ range .years }}
+                  <span class="journey-gridline" style="top:{{ printf "%.2f" (mul (div (sub $re .) $span) 100) }}%"></span>
+                  {{ end }}
+                </div>
+                {{ range .milestones }}
+                <div class="journey-milestone" style="top:{{ printf "%.2f" (mul (div (sub $re .date) $span) 100) }}%">
+                  <span class="journey-milestone-label">{{ .title | markdownify }}</span>
+                </div>
+                {{ end }}
+                {{ range $li, $lane := .lanes }}
+                <div class="journey-lane">
+                  {{ range $items }}
+                  {{ if eq .lane $li }}
+                  {{ $top := printf "%.2f" (mul (div (sub $re .end) $span) 100) }}
+                  {{ $h := printf "%.2f" (mul (div (sub .end .start) $span) 100) }}
+                  <div class="journey-bar" style="top:{{ $top }}%; height:{{ $h }}%; background:{{ $lane.color }}">
+                    <span class="journey-bar-title">{{ .title | markdownify }}</span>
+                    {{ with .sub }}<span class="journey-bar-sub">{{ . | markdownify }}</span>{{ end }}
+                  </div>
+                  {{ end }}
+                  {{ end }}
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }} {{ end }}
+
     <div class="row experience-skill">
       {{ if .Site.Data.content.experience.enable }} {{ with
       .Site.Data.content.experience }}
@@ -67,22 +123,55 @@
       .Site.Data.content.skill }}
       <div class="col-lg-6 col-sm-6 col-11 skill">
         <h2>{{ .title }}</h2>
+        {{ $showpercent := .showpercent }}
         <div class="skill-progress-bar">
-          {{ range .skill_list }}
-          <div class="clearfix">
-            <span class="skillbar-title">{{ .name }}</span>
-            {{ if .Site.Data.content.skill.showpercent }}
-            <span class="skill-bar-percent">{{ .percentage }}</span>
-            {{ end }}
-            <div class="skillbar" data-percent="{{ .percentage }}">
-              <div class="skillbar-bar"></div>
+          {{ range .categories }}
+          <div class="skill-category">
+            <h4 class="skill-category-title">{{ .name }}</h4>
+            {{ range .skills }}
+            <div class="clearfix">
+              <span class="skillbar-title">{{ .name }}</span>
+              {{ if $showpercent }}
+              <span class="skill-bar-percent">{{ .percentage }}</span>
+              {{ end }}
+              <div class="skillbar" data-percent="{{ .percentage }}">
+                <div class="skillbar-bar"></div>
+              </div>
             </div>
+            {{ end }}
           </div>
           {{ end }}
         </div>
       </div>
       {{ end }} {{ end }}
     </div>
+
+    {{ if .Site.Data.content.education.enable }} {{ with
+    .Site.Data.content.education }}
+    <div class="row education">
+      <div class="col-12 experience">
+        <h2>{{ .title }}</h2>
+        <ul class="experience-chart">
+          {{ range .education_list }}
+          {{ if not (eq .enable false) }}
+            <li>
+              <div class="single-experience">
+                <h3>{{ .name | markdownify }}</h3>
+                {{ with .school }}
+                <span>{{ . | markdownify }} |</span>
+                {{ end }} {{ with .duration }}
+                <span>{{ . | markdownify }}</span>
+                {{ end }} {{ with .content }}
+                <p>{{ . | markdownify }}</p>
+                {{ end }}
+              </div>
+            </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    {{ end }} {{ end }}
   </div>
 </section>
 <!-- =============================
@@ -108,34 +197,30 @@
 {{ if .Site.Data.content.portfolio.enable }} {{ with
 .Site.Data.content.portfolio }}
 <section class="portfolio" id="portfolio">
-  <div class="container-fluid text-center">
-    <div class="row portfolio-holder text-left">
+  <div class="container text-center">
+    <div class="row">
       <div class="col-12 text-center">
         <h2>{{ .title }}</h2>
+        {{ with .subtitle }}<p class="portfolio-subtitle">{{ . | markdownify }}</p>{{ end }}
       </div>
-      <ul id="og-grid" class="og-grid">
-        {{ range .portfolio_list }} {{ $image := resources.Get .image }} {{
-        $big_image := $image.Fill "780x500 jpg" }} {{ $sm_image := $image.Fill
-        "395x250 jpg" }} {{ $parsed_name := replace .name "." "" }}
-        <li>
-          <p id="description-{{ $parsed_name | urlize }}" class="hidden">
-            {{ .description | markdownify }}
-          </p>
-          <a
-            href="{{ .url }}"
-            data-largesrc="{{ $big_image.RelPermalink }}"
-            data-title="{{ .name }}"
-            data-buttontext="SEE SITE"
-          >
-            <img
-              src="{{ $sm_image.RelPermalink }}"
-              alt="{{ $parsed_name }} image"
-            />
-          </a>
-        </li>
-        {{ end }}
-      </ul>
     </div>
+    <div
+      id="github-repos"
+      class="github-repos"
+      data-user="{{ .github_user }}"
+      data-count="{{ .repo_count | default 6 }}"
+    >
+      <p class="github-loading">Loading latest projects from GitHub…</p>
+    </div>
+    {{ with .github_user }}
+    <a
+      class="button github-all"
+      href="https://github.com/{{ . }}"
+      target="_blank"
+      rel="noreferrer"
+      >SEE ALL ON GITHUB <i class="fab fa-github"></i
+    ></a>
+    {{ end }}
   </div>
 </section>
 {{ end }} {{ end }}

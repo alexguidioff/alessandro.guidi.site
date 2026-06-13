@@ -5,24 +5,80 @@ hero:
   # animated text loop (replace with your real focus areas)
   occupations:
     - "Product Manager"
-    - "Tech & Data Enthusiast"
-    - "AI & Finance Explorer"
+    - "AI & Data Products"
+    - "Fintech & Financial Services"
+    - "ML Researcher"
 
   # hero background image
   bg_image: 'images/back_1.jpg'
   # optional mobile breakpoint background
   # mobile_bg_image: 'images/gus_small.jpg'
 
+########################### Journey (parallel timeline) ###############
+# Vertical swimlane chart. Each item is a bar whose height = its duration.
+# Dates are decimal years (e.g. Sep = .67). range_start/end frame the axis;
+# 'lane' is the 0-based index into the lanes list below.
+journey:
+  enable: true
+  title: 'EVERYTHING, IN PARALLEL'
+  range_start: 2019.4
+  range_end: 2026.85
+  years: [2020, 2021, 2022, 2023, 2024, 2025, 2026]
+  lanes:
+    - name: 'Education'
+      color: '#d2a23f'
+    - name: 'Professional'
+      color: '#d98a3c'
+    - name: 'Leadership'
+      color: '#a896c4'
+    - name: 'Research'
+      color: '#5cb0a6'
+  items:
+    - lane: 0
+      title: "Bachelor's — UniTo"
+      sub: '110/110'
+      start: 2019.67
+      end: 2022.67
+    - lane: 0
+      title: 'Master in Mgmt — ESCP'
+      sub: 'GPA 3.8 · 4 campuses'
+      start: 2022.67
+      end: 2026.67
+    - lane: 1
+      title: 'Consultant — Capgemini'
+      sub: 'Milan'
+      start: 2023.67
+      end: 2025.67
+    - lane: 1
+      title: 'Product Manager — Amazon'
+      sub: 'Paris · EU5'
+      start: 2025.67
+      end: 2026.85
+    - lane: 2
+      title: '180 Degrees Consulting'
+      sub: 'Consultant → President'
+      start: 2022.67
+      end: 2025.5
+    - lane: 3
+      title: 'ML Research — VC Valuation'
+      sub: 'ICIS & WI 2026'
+      start: 2025.0
+      end: 2026.5
+  # Point-in-time markers drawn as a line across the lanes (e.g. short programs)
+  milestones:
+    - date: 2023.67
+      title: 'Exec Program — SDA Bocconi & Capgemini'
+
 ########################### About ##################################
 about:
   enable: true
   image: 'images/Ale.png'
   title: 'About Me'
-  content: Hi! I'm Alessandro Guidi, a Product Manager passionate about technology, data, and innovation. 
+  content: Hi! I'm Alessandro Guidi, a Product Manager working at the intersection of AI, data, and finance. At Amazon I build B2B products for the EU5 market, and on the side I run ML research on venture-capital valuation — with two papers currently under review at ICIS 2026 and WI 2026.
     <br>
-    I love designing efficient workflows, building scalable solutions, and exploring the intersection of tech and finance.  
+    My favourite quest is turning model outputs into product decisions — bridging data-science teams and business stakeholders across fintech, wealthtech, and financial services.
     <br>
-    If you want to collaborate or have any questions, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/alessandroguidi1/), [GitHub](https://github.com/alexguidioff), or by [email](mailto:alexguidioff@gmail.com).
+    If you want to team up or just say hi, reach me on [LinkedIn](https://www.linkedin.com/in/alessandroguidi1/), [GitHub](https://github.com/alexguidioff), or by [email](mailto:alexguidioff@gmail.com).
   button:
     enable: true
     label: 'DOWNLOAD MY RESUME'
@@ -34,44 +90,93 @@ experience:
   enable: true
   title: 'EXPERIENCE'
   experience_list:
-    - name: Product Manager
-      company: '[Amazon France](https://www.amazon.com/)'
-      duration: '2025-Current'
-      content: "Embarking on a new quest at Amazon, leveling up my skills in product management and B2B adventures, ready to tackle challenges, optimize workflows, and conquer new markets. The adventure has just begun, and every day is a boss fight waiting to be mastered!"
+    - name: EU5 3P Product Manager
+      company: '[Amazon](https://www.amazon.com/) · Paris'
+      duration: 'Sep 2025 - present'
+      content: "Leading the EU5 quest to onboard strategic B2B sellers (+€100M annual revenue) onto Amazon Business, rallying a party of Sales, Tech, Legal, and Ops across 5 markets. Redesigned the Salesforce CRM with data-driven automation, cutting operational overhead ~25% and shortening the commercial cycle end-to-end. Every funnel KPI is a stat I'm here to level up."
 
     - name: Consultant
-      company: '[Capgemini Italy](https://www.capgemini.com/)'
-      duration: '2023-2025'
-      content: "Built strategic battle plans for financial fortresses, slashed €2M in operational costs like a pro-level raid, optimized risk models like leveling up skills, and guided clients through epic transformation quests to align with the high-score corporate strategy leaderboard."
-   
-    - name: Business Analyst
-      company: '[Facile.it](https://www.facile.it/)'
-      duration: '2023-23'
-      content: "Leveled up the mortgage division by 30%, unlocked workflow efficiency boosts, and completed the epic quest of optimizing pricing strategies. XP gained: customers acquired!"
+      company: '[Capgemini](https://www.capgemini.com/) · Milan'
+      duration: 'Sep 2023 - Aug 2025'
+      content: "Crafted financial models and reengineered processes for Tier-1 banking guilds, unlocking ~€2M in documented cost savings. Built market-analysis models and risk-assessment tools to guide executives through digital-transformation campaigns, presenting insights to C-level stakeholders at regulated institutions."
+
+    - name: ML Researcher · Master's Thesis
+      company: '[ESCP Business School](https://escp.eu/) · Paris / Turin'
+      duration: '2025 - 2026'
+      content: "Built an end-to-end ML pipeline predicting startup valuations from investor co-investment networks across 10,000+ VC-backed companies. Engineered graph features (centrality, syndicate overlap) and benchmarked XGBoost / Random Forest with SHAP against DCF and comparables, beating the baselines on early-stage valuation. Two papers under review at ICIS 2026 & WI 2026."
+
+    - name: President · 180 Degrees Consulting
+      company: '[180 Degrees Consulting](https://180dc.org/) · Turin'
+      duration: '2022 - 2025'
+      content: "Climbed the full party roster — Consultant → Project Manager → Consulting Director → President — setting chapter strategy, managing the project portfolio, and coaching PMs. Led CiboCrudo's B2B EU5 expansion through reseller partnerships, driving ~30% revenue growth."
 
 ############################### Skill #################################
 skill:
   enable: true
   title: 'SOME SKILLS'
   showpercent: false
-  skill_list:
-    - name: 'Data Analysis'
-      percentage: '85%'
+  categories:
+    - name: 'Product Management'
+      skills:
+        - name: 'Roadmapping'
+          percentage: '95%'
+        - name: 'KPI design & funnel analytics'
+          percentage: '92%'
+        - name: 'Stakeholder management'
+          percentage: '90%'
+        - name: 'Agile / Scrum'
+          percentage: '83%'
 
-    - name: 'Project Management'
-      percentage: '93%'
+    - name: 'Data & Machine Learning'
+      skills:
+        - name: 'Python (scikit-learn, XGBoost, SHAP)'
+          percentage: '85%'
+        - name: 'SQL (Redshift)'
+          percentage: '85%'
+        - name: 'Feature engineering & graph analytics'
+          percentage: '80%'
+        - name: 'Model explainability'
+          percentage: '82%'
 
-    - name: 'Communication'
-      percentage: '58%'
+    - name: 'BI & Reporting'
+      skills:
+        - name: 'Tableau'
+          percentage: '88%'
+        - name: 'Power BI'
+          percentage: '84%'
+        - name: 'Excel (advanced)'
+          percentage: '92%'
+        - name: 'Financial modelling'
+          percentage: '85%'
 
-    - name: 'Adaptability'
-      percentage: '100%'
+    - name: 'Finance & Markets'
+      skills:
+        - name: 'Valuation (DCF, comparables, ML)'
+          percentage: '88%'
+        - name: 'Corporate finance'
+          percentage: '85%'
+        - name: 'Risk assessment'
+          percentage: '80%'
 
-    - name: 'Problem Solving'
-      percentage: '92%'
+############################# Education ################################
+education:
+  enable: true
+  title: 'EDUCATION'
+  education_list:
+    - name: Master in Management — GPA 3.8/4.0
+      school: '[ESCP Business School](https://escp.eu/) · Turin · Berlin · Madrid · Paris'
+      duration: 'Sep 2022 - Sep 2026'
+      content: "A multi-campus journey across Turin, Berlin, Madrid, and Paris, split between two tracks — Finance (English track) and International Business Consulting. On the finance side I went deep into Firm Valuation, Advanced Corporate Finance, Options/Futures & other Derivatives, Empirical Methods in Finance, and Behavioural Finance; on the consulting side I worked through Foundations of Consulting, Economic Consulting, and back-to-back Live Case Studies on digital transformation and sustainability. I graduated with a 3.8/4.0 GPA, and the final boss was my thesis — an ML-based decision support system for venture-capital valuation, now under review at ICIS 2026 and WI 2026."
 
-    - name: 'Reporting & Visualization'
-      percentage: '85%'
+    - name: The Future of Financial Institutions Management
+      school: '[SDA Bocconi](https://www.sdabocconi.it/) & Capgemini · Milan'
+      duration: 'Sep 2023'
+      content: "A corporate-sponsored deep-dive into the future of banking: financial markets, digital innovation, and the strategic shifts reshaping financial institutions. An intense side-quest that connected classroom theory to the real transformation challenges I'd soon tackle as a consultant."
+
+    - name: Bachelor's in Business & Management — 110/110
+      school: '[Università degli Studi di Torino](https://www.unito.it/) · Turin'
+      duration: 'Sep 2019 - Sep 2022'
+      content: "Graduated with top marks (110/110), building the foundations in accounting, economics, corporate finance, and management that everything else stands on. This is where I first fell for the mix of numbers, strategy, and problem-solving that still drives my work today."
 
 funfacts:
   enable: true
@@ -93,11 +198,11 @@ funfacts:
       count: '3'
 
 ############################# portfolio ################################
+# Live GitHub feed: a small script (assets/js/github-repos.js) fetches the
+# most recently updated public repos from the GitHub API on each visit.
 portfolio:
   enable: true
   title: 'MY WORK'
-  portfolio_list:
-    - name: Hugo
-      image: 'images/portfolio/Github.jpg'
-      url: https://github.com/alexguidioff/Portfolio_DataScience
-      description: Welcome to my Data Science portfolio! This repository contains multiple projects developed during my studies and personal work. Each project is organized in its own folder, and each folder contains a README.md in Italian that describes the project in detail, including data analysis, preprocessing steps, and code explanations.
+  subtitle: 'My latest public projects, pulled live from GitHub.'
+  github_user: 'alexguidioff'
+  repo_count: 6

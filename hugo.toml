@@ -1,7 +1,12 @@
 ######################## default configuration ####################
-baseURL = "https://example.com"
-title = "Port Hugo"
+baseURL = "https://alessandroguidi.site/"
+languageCode = "en-us"
+title = "Alessandro Guidi"
 theme = "port-hugo-main"
+
+# Allow inline HTML (e.g. <br>) inside markdownified content like the About section
+[markup.goldmark.renderer]
+unsafe = true
 
 ############################# Plugins ##############################
 
@@ -51,12 +56,12 @@ weight = 3
 
 #################### default parameters ################################
 [params]
-copyright = "Copyright Burton Guster &copy;"
+copyright = "Copyright &copy; Alessandro Guidi"
 # Meta data
-description = "Personal Portfolio"
-author = "Burton Guster"
+description = "Alessandro Guidi — Product Manager working at the intersection of AI, data, and finance (Amazon, ML research on VC valuation)."
+author = "Alessandro Guidi"
 favicon = "images/favicon.png"
-google_analytics = "G-ABCDEFG123"
+# google_analytics = "G-XXXXXXXXXX"  # add your real Measurement ID to enable analytics
 logo_light = "images/logo.png"
 logo_dark = "images/logo-dark.png"
 
@@ -69,19 +74,15 @@ preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
 
 [[params.social]]
 icon = "fab fa-github"
-link = "https://github.com/tylersayshi"
+link = "https://github.com/alexguidioff"
 
 [[params.social]]
 icon = "fab fa-linkedin"
-link = "https://www.linkedin.com/"
+link = "https://www.linkedin.com/in/alessandroguidi1/"
 
 [[params.social]]
 icon = "fas fa-envelope"
-link = "mailto:guster@burton.com"
-
-[[params.social]]
-icon = "fab fa-medium"
-link = "https://medium.com/@gusburton"
+link = "mailto:alexguidioff@gmail.com"
 
 contentDir = "content/english"
 weight = 1

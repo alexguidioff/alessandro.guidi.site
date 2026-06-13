@@ -5,3 +5,5 @@
 <script src="{{ $script.RelPermalink }}"></script>
 {{ $script := resources.Get "js/hugrid.custom.js" | minify }}
 <script src="{{ $script.RelPermalink }}"></script>
+{{ $github := resources.Get "js/github-repos.js" | minify }}
+<script src="{{ $github.RelPermalink }}" defer></script>
