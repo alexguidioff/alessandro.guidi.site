@@ -39,8 +39,8 @@ link = "plugins/hugrid/hugrid.min.js"
 
 # main menu
 [[menu.main]]
-name = "Home"
-URL = "#home"
+name = "Alessandro Guidi"
+URL = "/"
 weight = 1
 
 [[menu.main]]
@@ -61,9 +61,9 @@ copyright = "Copyright &copy; Alessandro Guidi"
 description = "Alessandro Guidi — Product Manager working at the intersection of AI, data, and finance (Amazon, ML research on VC valuation)."
 author = "Alessandro Guidi"
 favicon = "images/favicon.png"
-# google_analytics = "G-XXXXXXXXXX"  # add your real Measurement ID to enable analytics
-logo_light = "images/logo.png"
-logo_dark = "images/logo-dark.png"
+google_analytics = ""
+logo_light = "images/favicon.png"
+logo_dark = "images/favicon.png"
 
 # Preloader
 [params.preloader]

@@ -1,3 +1,4 @@
+
 ########################## hero area ##########################
 hero:
   title: "Hi, I'm Alessandro Guidi"
@@ -12,7 +13,7 @@ hero:
   # hero background image
   bg_image: 'images/back_1.jpg'
   # optional mobile breakpoint background
-  # mobile_bg_image: 'images/gus_small.jpg'
+  mobile_bg_image: 'images/back_1.jpg'
 
 ########################### Journey (parallel timeline) ###############
 # Vertical swimlane chart. Each item is a bar whose height = its duration.
@@ -193,9 +194,9 @@ funfacts:
       image: 'images/icons/abroad.png'
       count: '3'
 
-    - name: 'DUCKS THAT APPROVED THIS SITE'
+    - name: 'DUCKS APPROVED THIS SITE'
       image: 'images/icons/duck.png'
-      count: '3'
+      count: '5'
 
 ############################# portfolio ################################
 # Live GitHub feed: a small script (assets/js/github-repos.js) fetches the
