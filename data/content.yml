@@ -5,7 +5,7 @@ hero:
 
   role: 'Product Manager'
   focus: 'AI & data products · Fintech & financial services'
-  availability: 'Lugano / Turin · Available September 2026'
+  availability: 'Zürich / Turin'
   work_authorisation: 'EU citizen · Eligible to work in Switzerland'
 
   # Focus areas retained for the professional profile.
@@ -47,7 +47,7 @@ journey:
       start: 2019.67
       end: 2022.67
     - lane: 0
-      title: 'Master in Mgmt — ESCP'
+      title: 'Master in Management — ESCP'
       sub: 'GPA 3.8 · 4 campuses'
       period: 'Sep 2022 – Sep 2026'
       start: 2022.67
@@ -61,9 +61,9 @@ journey:
     - lane: 1
       title: 'Product Manager — Amazon'
       sub: 'Paris · EU5'
-      period: 'Sep 2025 – present'
+      period: 'Sep 2025 – Aug 2026'
       start: 2025.67
-      end: 2026.85
+      end: 2026.67
     - lane: 2
       title: '180 Degrees Consulting'
       sub: 'Consultant → President'
@@ -117,10 +117,10 @@ experience:
   enable: true
   title: 'EXPERIENCE'
   experience_list:
-    - name: EU5 3P Product Manager (Apprenticeship)
+    - name: EU5 3P Product Manager
       company: '[Amazon](https://www.amazon.com/) · Paris'
-      duration: 'Sep 2025 - present'
-      content: "Own product strategy and roadmap for onboarding strategic B2B sellers (+€100M annual revenue) into EU5 Amazon Business, coordinating across Sales, Tech, Legal, and Ops in 5 markets. Redesigned Salesforce-based CRM workflows using data-driven automation, reducing operational overhead by ~25% and cutting commercial cycle time end-to-end. Defined and tracked funnel KPIs to drive prioritisation decisions and report to senior stakeholders."
+      duration: 'Sep 2025 - Aug 2026'
+      content: "Owned product strategy and roadmap for onboarding strategic B2B sellers (+€100M annual revenue) into EU5 Amazon Business, coordinating across Sales, Tech, Legal, and Ops in 5 markets. Redesigned Salesforce-based CRM workflows using data-driven automation, reducing operational overhead by ~25% and cutting commercial cycle time end-to-end. Defined and tracked funnel KPIs to drive prioritisation decisions and report to senior stakeholders."
 
     - name: Consultant
       company: '[Capgemini](https://www.capgemini.com/) · Milan'
