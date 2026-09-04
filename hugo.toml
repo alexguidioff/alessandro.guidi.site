@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://alessandroguidi.site/"
+baseURL = "https://alessandroguidi.online/"
 languageCode = "en-us"
 title = "Alessandro Guidi"
 theme = "port-hugo-main"
