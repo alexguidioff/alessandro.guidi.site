@@ -28,19 +28,15 @@
       >
         <div class="head-holder">
           <h1 class="introduction">{{ .title | markdownify | emojify }}</h1>
-          <div class="animated-text">
-            <strong class="cd-headline clip">
-              <span class="cd-words-wrapper">
-                {{ range $index, $elements:= .occupations }} {{ if eq $index 0
-                }}
-                <b class="is-visible">{{ . }}</b>{{ else }}<b>{{ . }}</b>{{ end
-                }} {{ end }}
-              </span>
-            </strong>
+          <p class="hero-role">{{ .role }}</p>
+          <p class="hero-focus">{{ .focus }}</p>
+          <p class="hero-availability">{{ .availability }}<br>{{ .work_authorisation }}</p>
+          <div class="profile-actions">
+            {{ with $.Site.Data.content.about.button }}
+            <a class="button" href="{{ .link | relURL }}" target="_blank" rel="noreferrer">DOWNLOAD CV</a>
+            {{ end }}
+            <a class="button button-secondary" href="mailto:alexguidioff@gmail.com">GET IN TOUCH</a>
           </div>
-          {{ if .button.enable }} {{ with .button }}
-          <a class="hireMe button" href="{{ .link }}">{{ .label }}</a>
-          {{ end }} {{ end }}
         </div>
       </div>
     </div>

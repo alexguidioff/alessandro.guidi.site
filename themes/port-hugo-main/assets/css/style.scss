@@ -805,7 +805,7 @@ label {
   padding: 70px 0px;
 }
 .about-me-text {
-  h1 {
+  h2 {
     position: relative;
     color: #c7c7c7;
     font-weight: 700;
@@ -893,48 +893,31 @@ ul.experience-chart {
     margin-top: 0;
     margin-bottom: 4px;
     font-weight: 700;
-    color: #665f34;
+    color: #d2a23f;
   }
 }
 .single-experience {
   position: relative;
   top: -2px;
 }
-.skill-progress-bar {
+.skill-groups {
   margin-top: 41px;
 }
-.skillbar {
-  position: relative;
-  display: block;
-  margin-bottom: 40px;
-  width: 100%;
-  background: #231f1e;
-  border: 2px solid #c7c7c7;
-  height: 18px;
-  border-radius: 22px;
-}
-.skillbar-title {
-  font-size: 16px;
-  color: #665f34;
-  font-weight: 700;
-  display: inline-block;
-  margin-bottom: 7px;
-}
-.skill-bar-percent {
-  font-size: 16px;
-  color: #665f34;
-  font-weight: 700;
-  display: inline-block;
-  margin-bottom: 7px;
-  float: right;
-}
-.skillbar-bar {
-  height: 10px;
-  margin: 2px;
-  width: 0;
-  max-width: calc(100% - 4px);
-  background: #665f34;
-  border-radius: 22px;
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: 7px 11px;
+    border: 1px solid #5b5049;
+    border-radius: 6px;
+    color: #e1dbd5;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
 }
 .portfolio {
   padding: 70px 0px;
@@ -1347,14 +1330,11 @@ ul.experience-chart {
   .experience-chart {
     margin-top: 25px;
   }
-  .skill-progress-bar {
+  .skill-groups {
     margin-top: 25px;
   }
   .skill {
     margin-top: 30px;
-  }
-  .skillbar {
-    margin-bottom: 15px;
   }
 }
 @media (max-width: 880px) {
@@ -1563,6 +1543,8 @@ ul.experience-chart {
 }
 .journey-bar {
   position: absolute;
+  top: var(--bar-top);
+  height: var(--bar-height);
   left: 6px;
   right: 6px;
   border-radius: 9px;
@@ -1613,17 +1595,8 @@ ul.experience-chart {
   border-radius: 11px;
   white-space: nowrap;
 }
-@media (max-width: 767px) {
-  .journey {
-    min-width: 540px;
-  }
-  .journey-lane-title {
-    font-size: 11px;
-  }
-  .journey-bar .journey-bar-title {
-    font-size: 12px;
-  }
-}
+.journey-mobile-heading,
+.journey-period { display: none; }
 /*--------------------------------
    End Journey (parallel timeline)
 ----------------------------------*/
@@ -1638,7 +1611,7 @@ ul.experience-chart {
 }
 .skill-category-title {
   color: #D9822B;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -1647,3 +1620,114 @@ ul.experience-chart {
 /*--------------------------------
    End Skill categories
 ----------------------------------*/
+
+/* Profile, research, and selected work */
+.header {
+  height: auto;
+  min-height: 620px;
+  padding: 120px 0 80px;
+  display: flex;
+  align-items: center;
+  &::after {
+    background: linear-gradient(90deg, rgba(20, 18, 17, .94), rgba(20, 18, 17, .88) 55%, rgba(20, 18, 17, .68));
+  }
+  .hero-image { position: absolute; inset: 0; }
+  .head-container {
+    position: relative;
+    display: block;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .head-holder { display: block; }
+  .introduction { font-size: clamp(2.1rem, 5vw, 3.75rem); }
+}
+.hero-role { color: #fff; font-size: 1.75rem; font-weight: 500; margin: 20px 0 4px; }
+.hero-focus { color: #fff; font-size: 1.125rem; font-weight: 500; line-height: 1.6; }
+.hero-availability { color: #fff; font-size: 1.0625rem; font-weight: 400; line-height: 1.8; margin-top: 24px; }
+.profile-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.profile-actions .button {
+  margin: 0;
+  padding: 12px 20px;
+  font-size: .875rem;
+  color: #231f1e;
+  background: #d2a23f;
+  border-color: #d2a23f;
+}
+.profile-actions .button-secondary { color: #fff; background: transparent; border-color: #e1dbd5; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #d2a23f; outline-offset: 5px; }
+#research, #about, #portfolio { scroll-margin-top: 80px; }
+.research-section { margin: 64px 0; color: #e1dbd5; }
+.research-section > h2 { font-weight: 700; letter-spacing: 2px; margin-bottom: 28px; }
+.research-card {
+  background: #2b2624;
+  border: 1px solid #5b5049;
+  border-left: 4px solid #5cb0a6;
+  border-radius: 12px;
+  padding: clamp(20px, 4vw, 40px);
+  p { font-size: 1rem; line-height: 1.7; }
+  h3 { color: #fff; font-size: clamp(1.35rem, 3vw, 1.85rem); line-height: 1.3; }
+  h4 { color: #89d0c6; font-size: 1rem; }
+  .research-status { color: #89d0c6; font-size: .875rem; font-weight: 500; }
+  .research-affiliation { color: #bdb5ad; font-size: .875rem; }
+  summary { cursor: pointer; color: #e1dbd5; padding: 12px 0; }
+  details p { margin-top: 12px; }
+}
+.research-link { display: inline-block; color: #edb66c; margin-top: 20px; text-decoration: underline; }
+.research-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 24px 0;
+  margin: 24px 0;
+  border-block: 1px solid #5b5049;
+  div { display: flex; flex-direction: column; }
+  dt { font-size: .875rem; font-weight: 400; }
+  dd { order: -1; color: #fff; font-size: 2rem; font-weight: 500; margin: 0; }
+}
+.education { margin-top: 48px; }
+.selected-projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 36px; text-align: left; }
+.project-card {
+  padding: 26px;
+  background: #2b2624;
+  border: 1px solid #5b5049;
+  border-radius: 12px;
+  color: #e1dbd5;
+  h3 { color: #fff; font-size: 1.4rem; line-height: 1.35; }
+  .project-context { color: #edb66c; font-size: .875rem; }
+  dl { margin: 24px 0 0; }
+  dt { color: #bdb5ad; font-size: .875rem; margin-top: 18px; }
+  dd { font-size: 1rem; line-height: 1.6; margin: 5px 0 0; }
+  .project-outcome { color: #edb66c; font-weight: 500; }
+}
+.github-heading { color: #e1dbd5; font-size: 1.25rem; margin-top: 64px; letter-spacing: 2px; }
+@media (max-width: 767px) {
+  .header { min-height: auto; padding: 100px 0 56px; }
+  .header .head-container { flex: 0 0 100%; max-width: 100%; }
+  .selected-projects { grid-template-columns: 1fr; }
+  .research-metrics { grid-template-columns: 1fr; gap: 16px; }
+  .research-metrics div { flex-direction: row; align-items: baseline; gap: 16px; }
+  .research-metrics dd { min-width: 100px; }
+  .journey-scroll { overflow: visible; }
+  .journey-head, .journey-axis, .journey-grid { display: none; }
+  .journey-body { display: block; height: auto; }
+  .journey-lanes { display: flex; flex-direction: column; gap: 24px; }
+  .journey-lane { padding-left: 16px; border-left: 2px solid #5b5049; border-radius: 0; background: none; }
+  .journey-mobile-heading { display: block; font-size: 1rem; margin: 0 0 12px; }
+  .journey-bar {
+    position: static;
+    height: auto;
+    padding: 16px;
+    margin-top: 12px;
+    overflow: visible;
+    box-shadow: none;
+    &:hover { transform: none; box-shadow: none; }
+    .journey-bar-title { font-size: 1rem; line-height: 1.4; }
+    .journey-bar-sub { font-size: .875rem; opacity: 1; }
+  }
+  .journey-period { display: block; font-size: .875rem; margin-top: 8px; }
+  .journey-milestone { position: static; order: 1; border: 0; pointer-events: auto; }
+  .journey-milestone-label { position: static; display: block; white-space: normal; font-size: .875rem; line-height: 1.5; padding: 16px; }
+  .github-grid { grid-template-columns: minmax(0, 1fr); }
+}

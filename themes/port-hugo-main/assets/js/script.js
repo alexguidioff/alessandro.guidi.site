@@ -200,48 +200,6 @@
   /*--------------------------------
 			Start About Me
 	----------------------------------*/
-  // Initializing Skillbar Animation
-  (function () {
-    var skillSection = document.querySelector('.skill');
-    if (!skillSection) {
-      return;
-    }
-    var filled = false;
-    // Set each bar to a pixel width derived from its data-percent.
-    // Pixels (not %) so the CSS width transition interpolates smoothly.
-    var setWidths = function (animate) {
-      $('.skillbar').each(function () {
-        var pct = parseFloat($(this).attr('data-percent')) || 0;
-        var px = ($(this).width() * pct) / 100;
-        var bar = $(this).find('.skillbar-bar');
-        if (animate) {
-          bar.stop(true).animate({ width: px + 'px' }, 1400);
-        } else {
-          bar.css('width', px + 'px');
-        }
-      });
-    };
-    var maybeFill = function () {
-      if (filled) {
-        return;
-      }
-      var rect = skillSection.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.92 && rect.bottom > 0) {
-        filled = true;
-        setWidths(true);
-        $(window).off('scroll.skillbar');
-      }
-    };
-    // Keep bars accurate when the viewport (and column width) changes.
-    $(window).on('resize.skillbar', function () {
-      if (filled) {
-        setWidths();
-      }
-    });
-    $(window).on('scroll.skillbar', maybeFill);
-    $(window).on('load', maybeFill);
-    maybeFill();
-  })();
   /*--------------------------------
 			End About Me
 	----------------------------------*/
@@ -271,17 +229,6 @@
     happyClient.start();
     projects.start();
     coffee.start();
-    // Setting Skillbar Value Immediately
-    $('.skillbar').each(function () {
-      $(this)
-        .find('.skillbar-bar')
-        .animate(
-          {
-            width: jQuery(this).attr('data-percent')
-          },
-          0
-        );
-    });
     // Removing Bootstrap Class and Re-Style Input
     $('input').removeClass('form-control');
     $('input').css({
@@ -306,17 +253,6 @@
     happyClient.start();
     projects.start();
     coffee.start();
-    // Setting Skillbar Value Immediately
-    $('.skillbar').each(function () {
-      $(this)
-        .find('.skillbar-bar')
-        .animate(
-          {
-            width: jQuery(this).attr('data-percent')
-          },
-          0
-        );
-    });
   }
   /*--------------------------------
 			End Code for Mobile Devices

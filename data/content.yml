@@ -3,7 +3,12 @@
 hero:
   title: "Hi, I'm Alessandro Guidi"
 
-  # animated text loop (replace with your real focus areas)
+  role: 'Product Manager'
+  focus: 'AI & data products · Fintech & financial services'
+  availability: 'Lugano / Turin · Available September 2026'
+  work_authorisation: 'EU citizen · Eligible to work in Switzerland'
+
+  # Focus areas retained for the professional profile.
   occupations:
     - "Product Manager"
     - "AI & Data Products"
@@ -38,126 +43,146 @@ journey:
     - lane: 0
       title: "Bachelor's — UniTo"
       sub: '110/110'
+      period: 'Sep 2019 – Sep 2022'
       start: 2019.67
       end: 2022.67
     - lane: 0
       title: 'Master in Mgmt — ESCP'
       sub: 'GPA 3.8 · 4 campuses'
+      period: 'Sep 2022 – Sep 2026'
       start: 2022.67
       end: 2026.67
     - lane: 1
       title: 'Consultant — Capgemini'
       sub: 'Milan'
+      period: 'Sep 2023 – Aug 2025'
       start: 2023.67
       end: 2025.67
     - lane: 1
       title: 'Product Manager — Amazon'
       sub: 'Paris · EU5'
+      period: 'Sep 2025 – present'
       start: 2025.67
       end: 2026.85
     - lane: 2
       title: '180 Degrees Consulting'
       sub: 'Consultant → President'
+      period: 'Sep 2022 – Jul 2025'
       start: 2022.67
-      end: 2025.5
+      end: 2025.58
     - lane: 3
       title: 'ML Research — VC Valuation'
-      sub: 'ICIS & WI 2026'
+      sub: 'WI 2026 accepted'
+      period: '2025 – 2026'
       start: 2025.0
       end: 2026.5
   # Point-in-time markers drawn as a line across the lanes (e.g. short programs)
   milestones:
     - date: 2023.67
       title: 'Exec Program — SDA Bocconi & Capgemini'
+      period: 'Sep 2023'
 
 ########################### About ##################################
 about:
   enable: true
   image: 'images/Ale.png'
   title: 'About Me'
-  content: Hi! I'm Alessandro Guidi, a Product Manager working at the intersection of AI, data, and finance. At Amazon I build B2B products for the EU5 market, and on the side I run ML research on venture-capital valuation — with two papers currently under review at ICIS 2026 and WI 2026.
-    <br>
-    My favourite quest is turning model outputs into product decisions — bridging data-science teams and business stakeholders across fintech, wealthtech, and financial services.
+  content: I connect product strategy with technical depth in ML, LLMs, and blockchain/DeFi. My experience spans Amazon, Capgemini, and applied research on venture-capital valuation. I translate model outputs into product decisions, bridging data-science teams and business stakeholders across fintech, wealthtech, and financial services.
     <br>
     If you want to team up or just say hi, reach me on [LinkedIn](https://www.linkedin.com/in/alessandroguidi1/), [GitHub](https://github.com/alexguidioff), or by [email](mailto:alexguidioff@gmail.com).
   button:
     enable: true
     label: 'DOWNLOAD MY RESUME'
-    link: 'CV/Alessandro_Guidi_Resume.pdf'
+    link: 'CV/Alessandro_Guidi_CV_2026.pdf'
     icon: 'fa-download'
+
+research:
+  title: 'RESEARCH & PUBLICATIONS'
+  paper_title: 'A Data-Driven Decision Support System for Venture Capital Valuation'
+  affiliation: 'ESCP Business School · Paris / Turin · 2025–2026'
+  status: 'Accepted at WI 2026 · Business Informatics · Student Track'
+  summary: 'Co-authored a conference paper based on my master’s thesis: an end-to-end ML pipeline for private-company valuation, combining investor co-investment networks, funding history, and market signals.'
+  finding: 'Investor-syndicate capacity (mean co-investor AUM) was the dominant valuation driver in the SHAP analysis, providing evidence of information saturation.'
+  methods: 'Engineered network features including centrality, clustering, and syndicate overlap. Benchmarked Random Forest and XGBoost against DCF/comparables, using SHAP for explainability and an out-of-time holdout spanning the 2022 correction. The best model performed competitively with, and more robustly than, the traditional baselines.'
+  metrics:
+    - value: '3,403'
+      label: 'PitchBook-backed deals'
+    - value: '0.557'
+      label: 'Random Forest R²'
+    - value: '0.888'
+      label: 'Mean absolute error'
 
 ###########################3 Experience ##############################
 experience:
   enable: true
   title: 'EXPERIENCE'
   experience_list:
-    - name: EU5 3P Product Manager
+    - name: EU5 3P Product Manager (Apprenticeship)
       company: '[Amazon](https://www.amazon.com/) · Paris'
       duration: 'Sep 2025 - present'
-      content: "Leading the EU5 quest to onboard strategic B2B sellers (+€100M annual revenue) onto Amazon Business, rallying a party of Sales, Tech, Legal, and Ops across 5 markets. Redesigned the Salesforce CRM with data-driven automation, cutting operational overhead ~25% and shortening the commercial cycle end-to-end. Every funnel KPI is a stat I'm here to level up."
+      content: "Own product strategy and roadmap for onboarding strategic B2B sellers (+€100M annual revenue) into EU5 Amazon Business, coordinating across Sales, Tech, Legal, and Ops in 5 markets. Redesigned Salesforce-based CRM workflows using data-driven automation, reducing operational overhead by ~25% and cutting commercial cycle time end-to-end. Defined and tracked funnel KPIs to drive prioritisation decisions and report to senior stakeholders."
 
     - name: Consultant
       company: '[Capgemini](https://www.capgemini.com/) · Milan'
       duration: 'Sep 2023 - Aug 2025'
-      content: "Crafted financial models and reengineered processes for Tier-1 banking guilds, unlocking ~€2M in documented cost savings. Built market-analysis models and risk-assessment tools to guide executives through digital-transformation campaigns, presenting insights to C-level stakeholders at regulated institutions."
+      content: "Delivered financial modelling and process reengineering for Tier-1 banking clients, contributing to ~€2M in documented cost savings. Built market-analysis models, risk-assessment tools, KPI frameworks, and reporting structures to support digital-transformation decisions, presenting insights to C-level stakeholders at regulated financial institutions."
 
-    - name: ML Researcher · Master's Thesis
+    - name: Research & Publications · Master's Thesis
       company: '[ESCP Business School](https://escp.eu/) · Paris / Turin'
       duration: '2025 - 2026'
-      content: "Built an end-to-end ML pipeline predicting startup valuations from investor co-investment networks across 10,000+ VC-backed companies. Engineered graph features (centrality, syndicate overlap) and benchmarked XGBoost / Random Forest with SHAP against DCF and comparables, beating the baselines on early-stage valuation. Two papers under review at ICIS 2026 & WI 2026."
+      content: "Developed an ML decision support system for venture-capital valuation and co-authored a paper accepted at WI 2026. [Read the research summary](#research)."
 
     - name: President · 180 Degrees Consulting
       company: '[180 Degrees Consulting](https://180dc.org/) · Turin'
-      duration: '2022 - 2025'
-      content: "Climbed the full party roster — Consultant → Project Manager → Consulting Director → President — setting chapter strategy, managing the project portfolio, and coaching PMs. Led CiboCrudo's B2B EU5 expansion through reseller partnerships, driving ~30% revenue growth."
+      duration: 'Sep 2022 - Jul 2025'
+      content: "Progressed from Consultant to Project Manager, Consulting Director, and President. Defined chapter strategy, managed the project portfolio, and coached project managers. Led CiboCrudo's B2B EU5 expansion through reseller partnerships, driving ~30% revenue growth."
 
 ############################### Skill #################################
 skill:
   enable: true
-  title: 'SOME SKILLS'
-  showpercent: false
+  title: 'SKILLS & LANGUAGES'
   categories:
     - name: 'Product Management'
       skills:
         - name: 'Roadmapping'
-          percentage: '95%'
         - name: 'KPI design & funnel analytics'
-          percentage: '92%'
         - name: 'Stakeholder management'
-          percentage: '90%'
         - name: 'Agile / Scrum'
-          percentage: '83%'
+        - name: 'Salesforce CRM'
+        - name: 'PMP-certified'
 
     - name: 'Data & Machine Learning'
       skills:
         - name: 'Python (scikit-learn, XGBoost, SHAP)'
-          percentage: '85%'
         - name: 'SQL (Redshift)'
-          percentage: '85%'
         - name: 'Feature engineering & graph analytics'
-          percentage: '80%'
         - name: 'Model explainability'
-          percentage: '82%'
+        - name: 'LLM development'
+
+    - name: 'Blockchain & Digital Assets'
+      skills:
+        - name: 'DeFi protocols & tokenization'
+        - name: 'Digital asset custody & Web3 models'
+        - name: 'Smart contract fundamentals'
+
+    - name: 'Languages'
+      skills:
+        - name: 'Italian (native)'
+        - name: 'English (C1 · IELTS 7.0)'
+        - name: 'French (B2)'
 
     - name: 'BI & Reporting'
       skills:
         - name: 'Tableau'
-          percentage: '88%'
         - name: 'Power BI'
-          percentage: '84%'
         - name: 'Excel (advanced)'
-          percentage: '92%'
         - name: 'Financial modelling'
-          percentage: '85%'
 
     - name: 'Finance & Markets'
       skills:
         - name: 'Valuation (DCF, comparables, ML)'
-          percentage: '88%'
         - name: 'Corporate finance'
-          percentage: '85%'
         - name: 'Risk assessment'
-          percentage: '80%'
 
 ############################# Education ################################
 education:
@@ -167,17 +192,34 @@ education:
     - name: Master in Management — GPA 3.8/4.0
       school: '[ESCP Business School](https://escp.eu/) · Turin · Berlin · Madrid · Paris'
       duration: 'Sep 2022 - Sep 2026'
-      content: "A multi-campus journey across Turin, Berlin, Madrid, and Paris, split between two tracks — Finance (English track) and International Business Consulting. On the finance side I went deep into Firm Valuation, Advanced Corporate Finance, Options/Futures & other Derivatives, Empirical Methods in Finance, and Behavioural Finance; on the consulting side I worked through Foundations of Consulting, Economic Consulting, and back-to-back Live Case Studies on digital transformation and sustainability. I graduated with a 3.8/4.0 GPA, and the final boss was my thesis — an ML-based decision support system for venture-capital valuation, now under review at ICIS 2026 and WI 2026."
+      content: "Multi-campus programme across Turin, Berlin, Madrid, and Paris, specialising in International Business Consulting and Corporate Finance / Financial Markets (English finance track). Coursework covered Firm Valuation, Advanced Corporate Finance, Options/Futures & other Derivatives, Empirical Methods in Finance, Behavioural Finance, Foundations of Consulting, and Economic Consulting, alongside live case studies on digital transformation and sustainability. The programme includes integrated professional apprenticeship years at Capgemini and Amazon. GPA 3.8/4.0; thesis on ML-based venture-capital valuation, with a related paper accepted at WI 2026."
 
     - name: The Future of Financial Institutions Management
       school: '[SDA Bocconi](https://www.sdabocconi.it/) & Capgemini · Milan'
       duration: 'Sep 2023'
-      content: "A corporate-sponsored deep-dive into the future of banking: financial markets, digital innovation, and the strategic shifts reshaping financial institutions. An intense side-quest that connected classroom theory to the real transformation challenges I'd soon tackle as a consultant."
+      content: "Corporate-sponsored programme on financial markets, digital innovation, and strategic management trends in banking, connecting classroom theory to transformation challenges in financial institutions."
 
-    - name: Bachelor's in Business & Management — 110/110
+    - name: Bachelor's in Business & Management — 110/110 summa cum laude
       school: '[Università degli Studi di Torino](https://www.unito.it/) · Turin'
       duration: 'Sep 2019 - Sep 2022'
-      content: "Graduated with top marks (110/110), building the foundations in accounting, economics, corporate finance, and management that everything else stands on. This is where I first fell for the mix of numbers, strategy, and problem-solving that still drives my work today."
+      content: "Graduated with the highest grade achievable in the Italian system (110/110 summa cum laude), building foundations in corporate finance, financial accounting (IFRS), business strategy, and quantitative methods. This is where I first fell for the mix of numbers, strategy, and problem-solving that still drives my work today."
+
+############################# Certifications ###########################
+certifications:
+  enable: true
+  title: 'CERTIFICATIONS'
+  certification_list:
+    - name: 'PMP — Project Management Professional'
+      organisation: 'Project Management Institute'
+      duration: '2025'
+    - name: 'LLMs & Generative AI'
+      organisation: 'Neural Academy'
+      duration: '2023'
+      content: 'LLM architecture, fine-tuning, and deployment; applied to the end-to-end ML pipeline for the master’s thesis.'
+    - name: 'Blockchain & Digital Assets'
+      organisation: 'MasterZ (EU’s largest Blockchain Training Hub)'
+      duration: '2022'
+      content: 'DeFi protocols, tokenization, staking, digital asset custody, Web3 business models, and smart contract fundamentals.'
 
 funfacts:
   enable: true
@@ -203,7 +245,25 @@ funfacts:
 # most recently updated public repos from the GitHub API on each visit.
 portfolio:
   enable: true
-  title: 'MY WORK'
-  subtitle: 'My latest public projects, pulled live from GitHub.'
+  title: 'SELECTED WORK'
+  subtitle: 'Product strategy, financial services, and business growth.'
+  projects:
+    - title: 'B2B seller onboarding'
+      context: 'Amazon Business · EU5'
+      problem: 'Onboard strategic B2B sellers across five markets, coordinating commercial and operational teams.'
+      contribution: 'Owned product strategy and roadmap; redesigned Salesforce CRM workflows and defined funnel KPIs.'
+      result: '~25% less operational overhead and a shorter commercial cycle.'
+    - title: 'Banking process transformation'
+      context: 'Capgemini · Tier-1 banking'
+      problem: 'Support digital transformation and operational efficiency in regulated financial institutions.'
+      contribution: 'Delivered financial models, process reengineering, risk-assessment tools, and executive reporting.'
+      result: 'Contributed to ~€2M in documented cost savings.'
+    - title: 'B2B expansion through partnerships'
+      context: '180 Degrees Consulting · CiboCrudo'
+      problem: 'Expand CiboCrudo’s B2B business across EU5 markets.'
+      contribution: 'Led the expansion through reseller partnerships.'
+      result: '~30% revenue growth.'
+  github_title: 'LATEST ON GITHUB'
+  github_subtitle: 'My latest public repositories, updated automatically.'
   github_user: 'alexguidioff'
   repo_count: 6

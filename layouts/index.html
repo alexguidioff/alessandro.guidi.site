@@ -17,7 +17,7 @@
         "
       >
         <div class="text-holder">
-          <h1>{{ .title | safeHTML }}</h1>
+          <h2>{{ .title | safeHTML }}</h2>
           <p>{{ .content | markdownify | emojify }}</p>
           {{ if .button.enable }} {{ with .button }}
           <a
@@ -33,11 +33,37 @@
       </div>
       {{ with .image }}
       <div class="col-lg-6 col-sm-6 col-9 about-me-images">
-        <img src="{{ . | relURL }}" alt="about-me" />
+        <img src="{{ . | relURL }}" alt="Alessandro Guidi" />
       </div>
       {{ end }}
     </div>
     {{ end }} {{ end }}
+
+    {{ with .Site.Data.content.research }}
+    <section class="research-section" id="research" aria-labelledby="research-title">
+      <h2 id="research-title">{{ .title }}</h2>
+      <article class="research-card">
+        <p class="research-status">{{ .status }}</p>
+        <h3>{{ .paper_title }}</h3>
+        <p class="research-affiliation">{{ .affiliation }}</p>
+        <p>{{ .summary }}</p>
+        <dl class="research-metrics">
+          {{ range .metrics }}
+          <div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+          {{ end }}
+        </dl>
+        <h4>Key finding</h4>
+        <p>{{ .finding }}</p>
+        <details>
+          <summary>Methods & evaluation</summary>
+          <p>{{ .methods }}</p>
+        </details>
+        {{ with $.Site.Data.content.about.button }}
+        <a class="research-link" href="{{ .link | relURL }}" target="_blank" rel="noreferrer">Research summary in my CV →</a>
+        {{ end }}
+      </article>
+    </section>
+    {{ end }}
 
     {{ if .Site.Data.content.journey.enable }} {{ with
     .Site.Data.content.journey }}
@@ -70,18 +96,20 @@
                 </div>
                 {{ range .milestones }}
                 <div class="journey-milestone" style="top:{{ printf "%.2f" (mul (div (sub $re .date) $span) 100) }}%">
-                  <span class="journey-milestone-label">{{ .title | markdownify }}</span>
+                  <span class="journey-milestone-label">{{ .title | markdownify }}<span class="journey-period">{{ .period }}</span></span>
                 </div>
                 {{ end }}
                 {{ range $li, $lane := .lanes }}
                 <div class="journey-lane">
-                  {{ range $items }}
+                  <h3 class="journey-mobile-heading" style="color:{{ $lane.color }}">{{ $lane.name }}</h3>
+                  {{ range sort $items "start" "desc" }}
                   {{ if eq .lane $li }}
                   {{ $top := printf "%.2f" (mul (div (sub $re .end) $span) 100) }}
                   {{ $h := printf "%.2f" (mul (div (sub .end .start) $span) 100) }}
-                  <div class="journey-bar" style="top:{{ $top }}%; height:{{ $h }}%; background:{{ $lane.color }}">
+                  <div class="journey-bar" style="--bar-top:{{ $top }}%; --bar-height:{{ $h }}%; background:{{ $lane.color }}">
                     <span class="journey-bar-title">{{ .title | markdownify }}</span>
                     {{ with .sub }}<span class="journey-bar-sub">{{ . | markdownify }}</span>{{ end }}
+                    <span class="journey-period">{{ .period }}</span>
                   </div>
                   {{ end }}
                   {{ end }}
@@ -123,22 +151,15 @@
       .Site.Data.content.skill }}
       <div class="col-lg-6 col-sm-6 col-11 skill">
         <h2>{{ .title }}</h2>
-        {{ $showpercent := .showpercent }}
-        <div class="skill-progress-bar">
+        <div class="skill-groups">
           {{ range .categories }}
           <div class="skill-category">
-            <h4 class="skill-category-title">{{ .name }}</h4>
+            <h3 class="skill-category-title">{{ .name }}</h3>
+            <ul class="skill-tags">
             {{ range .skills }}
-            <div class="clearfix">
-              <span class="skillbar-title">{{ .name }}</span>
-              {{ if $showpercent }}
-              <span class="skill-bar-percent">{{ .percentage }}</span>
-              {{ end }}
-              <div class="skillbar" data-percent="{{ .percentage }}">
-                <div class="skillbar-bar"></div>
-              </div>
-            </div>
+              <li>{{ .name }}</li>
             {{ end }}
+            </ul>
           </div>
           {{ end }}
         </div>
@@ -158,6 +179,33 @@
               <div class="single-experience">
                 <h3>{{ .name | markdownify }}</h3>
                 {{ with .school }}
+                <span>{{ . | markdownify }} |</span>
+                {{ end }} {{ with .duration }}
+                <span>{{ . | markdownify }}</span>
+                {{ end }} {{ with .content }}
+                <p>{{ . | markdownify }}</p>
+                {{ end }}
+              </div>
+            </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    {{ end }} {{ end }}
+
+    {{ if .Site.Data.content.certifications.enable }} {{ with
+    .Site.Data.content.certifications }}
+    <div class="row education certifications">
+      <div class="col-12 experience">
+        <h2>{{ .title }}</h2>
+        <ul class="experience-chart">
+          {{ range .certification_list }}
+          {{ if not (eq .enable false) }}
+            <li>
+              <div class="single-experience">
+                <h3>{{ .name | markdownify }}</h3>
+                {{ with .organisation }}
                 <span>{{ . | markdownify }} |</span>
                 {{ end }} {{ with .duration }}
                 <span>{{ . | markdownify }}</span>
@@ -204,6 +252,21 @@
         {{ with .subtitle }}<p class="portfolio-subtitle">{{ . | markdownify }}</p>{{ end }}
       </div>
     </div>
+    <div class="selected-projects">
+      {{ range .projects }}
+      <article class="project-card">
+        <p class="project-context">{{ .context }}</p>
+        <h3>{{ .title }}</h3>
+        <dl>
+          <dt>Challenge</dt><dd>{{ .problem }}</dd>
+          <dt>My contribution</dt><dd>{{ .contribution }}</dd>
+          <dt>Outcome</dt><dd class="project-outcome">{{ .result }}</dd>
+        </dl>
+      </article>
+      {{ end }}
+    </div>
+    <h3 class="github-heading">{{ .github_title }}</h3>
+    <p class="portfolio-subtitle">{{ .github_subtitle }}</p>
     <div
       id="github-repos"
       class="github-repos"

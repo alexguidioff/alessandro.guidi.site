@@ -51,6 +51,11 @@ weight = 2
 [[menu.main]]
 name = "Portfolio"
 URL = "#portfolio"
+weight = 4
+
+[[menu.main]]
+name = "Research"
+URL = "#research"
 weight = 3
 
 
@@ -58,7 +63,7 @@ weight = 3
 [params]
 copyright = "Copyright &copy; Alessandro Guidi"
 # Meta data
-description = "Alessandro Guidi — Product Manager working at the intersection of AI, data, and finance (Amazon, ML research on VC valuation)."
+description = "Alessandro Guidi — Product Manager in fintech and financial-services product strategy, with experience at Amazon and Capgemini and applied ML research on VC valuation."
 author = "Alessandro Guidi"
 favicon = "images/favicon.png"
 google_analytics = ""
